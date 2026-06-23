@@ -1,5 +1,5 @@
 # Name your project and specify its version
-name: 'my_dbt_project'
+name: 'dbt_learn'
 version: '1.0.0'
 config-version: 2
 
@@ -7,10 +7,9 @@ config-version: 2
 profile: 'default'
 
 # These are the default folder paths for dbt to find your resources
-source-paths: ["models"]
+model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
-data-paths: ["data"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
@@ -23,5 +22,6 @@ clean-targets:
 # Define project-wide model configurations
 # In this example, all models in the 'my_dbt_project' folder will be materialized as views
 models:
-  my_dbt_project:
-    +materialized: view
+  dbt_learn:
+    staging:
+      +materialized: view
