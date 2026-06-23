@@ -1,0 +1,27 @@
+# Name your project and specify its version
+name: 'my_dbt_project'
+version: '1.0.0'
+config-version: 2
+
+# This specifies the profile in your `profiles.yml` to use by default
+profile: 'default'
+
+# These are the default folder paths for dbt to find your resources
+source-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+data-paths: ["data"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+# The target path dictates where compiled SQL and run artifacts are saved
+target-path: "target"
+clean-targets:
+    - "target"
+    - "dbt_modules"
+
+# Define project-wide model configurations
+# In this example, all models in the 'my_dbt_project' folder will be materialized as views
+models:
+  my_dbt_project:
+    +materialized: view
