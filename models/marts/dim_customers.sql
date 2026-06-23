@@ -1,5 +1,5 @@
--- {{config(materialized='table')}}
--- this is prioritized over the default dbt_project.yml
+{{config(materialized='table')}}
+this is prioritized over the default dbt_project.yml
 
 with customers as (
     select * from {{ref('stg_jaffle_shop__customers')}}
