@@ -1,6 +1,6 @@
 select
-    id as order_id,
-    user_id as customer_id,
-    order_date,
-    status
+    id as ORDER_ID,
+    user_id as CUSTOMER_ID,
+    ORDER_DATE,
+    STATUS
 from raw.jaffle_shop.orders

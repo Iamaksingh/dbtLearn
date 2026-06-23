@@ -1,0 +1,1 @@
+select sum(lifetime_value) as total_spend from {{ ref('dim_customers') }}
