@@ -1,1 +1,1 @@
-select sum(lifetime_value) as total_spend from {{ ref('dim_customers') }}
+select sum(lifetime_value) as total_spend from {{ ref('stg_stripe__customer_aggregates') }}
