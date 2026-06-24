@@ -1,0 +1,1 @@
+select ID, AMOUNT from {{ref('stg_stripe__payments')}} where AMOUNT<0
