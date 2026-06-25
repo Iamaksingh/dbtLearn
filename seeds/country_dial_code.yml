@@ -1,0 +1,9 @@
+version: 2
+
+seeds:
+  - name: country_dial_code
+    config: 
+      column_types:
+        country: varchar(50)
+        code: number
+        
